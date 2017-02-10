@@ -1,17 +1,28 @@
 <!DOCTYPE html>
   <html>
   <head>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Address Book</h1>
-    <form action ="/book" method="post">
-      <label for="name">Enter a contact's name</label>
-      <input type="text" id="name" name="name" >
-      <label for="address">Enter a contact's address</label>
-      <input type="text"id="address" name="address" >
-      <label for="phone-number">Enter a contact's phone-number</label>
-      <input type="number"id="phone-number" name="phone-number">
-      <button>Add contact</button>
-    </form>
+    <div class="container">
+        <h1 class="jumbotron">Address Book</h1>
+        <h2>Add a contact</h2>
+        <form action ="/book" method="post">
+            <div class="form-group">
+              <label for="name">Enter a contact's name</label>
+              <input type="text" id="name" name="name" >
+            </div>
+            <div class="form-group">
+              <label for="address">Enter a contact's address</label>
+              <input type="text"id="address" name="address" >
+            </div>
+            <div class="form-group">
+              <label for="phone-number">Enter a contact's phone-number</label>
+              <input type="number"id="phone-number" name="phone-number">
+            </div>
+              <button type="submit">Add contact</button>
+        </form>
+    </div>
   </body>
 </html>

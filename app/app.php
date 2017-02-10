@@ -18,7 +18,6 @@
 
     $app->get("/", function() use ($app)
     {
-     var_dump($_SESSION['list_of_contacts']);
       return $app['twig']->render("input_form.html.twig", array("contacts" => Contact::getAll()));
     });
 
