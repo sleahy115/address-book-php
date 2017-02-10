@@ -28,10 +28,15 @@
     });
     $app->post("/search", function() use ($app)
     {
-        var_dump(Contact::getAll());
-        $name_entered =$_POST["name"];
-        Contact::getAll()->search($name_entered);
-        var_dump(Contact::getAll()->search($name_entered));
+        $name_entered =$_POST["name-search"];
+
+        if ($new_contact->search($name_entered) == false) {
+            return "wrong";
+        }else{
+            return "it works!";
+        }
+        var_dump($_SESSION['list_of_contacts']->search($name_entered));
+
         return $app['twig']->render("search.html.twig");
     });
     $app->get("/clear", function() use ($app)

@@ -51,12 +51,15 @@
       {
           array_push($_SESSION['list_of_contacts'], $this);
       }
-      function search($name_entered){
-          if ($name_entered == $this->name)
-          {
-            return true;
-        }else {
-            return false;
+      function search($name_entered)
+      {
+        foreach($_SESSION['list_of_contacts'] as $contacts => $name){
+            if($name == $name_entered){
+                echo "its a match!";
+                return true;
+            }else {
+                return false;
+            }
         }
       }
       static function getAll()
