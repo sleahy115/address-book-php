@@ -3,7 +3,7 @@
       class Contact {
         private $name;
         private $address;
-        private $phone_number;
+        private $Phone_number;
         private $email;
 
 
@@ -12,7 +12,7 @@
           $this->name = $name;
           $this->address = $address;
           $this->phone_number = $phone_number;
-          $this->email =$email;
+          $this->email = $email;
       }
 
       function setName()
