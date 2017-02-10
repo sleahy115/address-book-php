@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      {%if contact.search%}
+        {% for contact in contacts%}
+        <li>{{contact.name}}</l1>
+        <li>{{contact.address}}</l1>
+      {%endif%}
+  </body>
+</html>

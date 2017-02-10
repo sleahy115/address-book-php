@@ -8,19 +8,22 @@
     <div class="container">
       <div class="jumbotron">Contacts</div>
         {% for contact in contact_list %}
-        <div class="panel-heading" id="heading">
-            <h1>{{contact.name}}</h1>
-        </div>
-        <div class="panel-body">
-            <ul>
-                <li>Address:{{contact.address}}</li>
-                <li>Phone number:{{contact.phone_number}}</li>
-                <li>Email:{{contact.email}}</li>
-            </ul>
+        <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+                <h1>{{contact.name}}</h1>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Address:{{contact.address}}</li>
+                    <li>Phone number:{{contact.phone_number}}</li>
+                    <li>Email:{{contact.email}}</li>
+                </ul>
+            </div>
         </div>
         {% endfor %}
       <button type="button"><a href="/">Add another contact</a></button>
       <button type="button"><a href="/clear">Clear contacts</a></button>
+      <button type="button"><a href="/search-form">Search contacts</a></button>
     </div>
       </body>
   </html>

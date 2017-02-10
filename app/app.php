@@ -22,6 +22,18 @@
       $new_contact->save();
       return $app['twig']->render("form_output.html.twig", array("contact_list"=>$_SESSION['list_of_contacts']) );
     });
+    $app->get("/search-form", function() use ($app)
+    {
+        return $app['twig']->render("search-form.html.twig", array("contacts" => Contact::getAll()));
+    });
+    $app->post("/search", function() use ($app)
+    {
+        var_dump(Contact::getAll());
+        $name_entered =$_POST["name"];
+        Contact::getAll()->search($name_entered);
+        var_dump(Contact::getAll()->search($name_entered));
+        return $app['twig']->render("search.html.twig");
+    });
     $app->get("/clear", function() use ($app)
     {
         return $app['twig']->render("clear.html.twig", array("clear" => Contact::clearAll()));
