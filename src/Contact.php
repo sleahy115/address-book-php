@@ -4,7 +4,7 @@
         private $name;
         private $address;
         private $Phone_number;
-      }
+
 
       function __construct($name, $address, $phone_number)
       {
@@ -36,6 +36,14 @@
       function getPhoneNumber()
       {
       return $this->phone_number;
+      }
+      function save()
+      {
+          array_push($_SESSION['list_of_contacts']);
+      }
+      function getAll()
+      {
+        return $_SESSION['list_of_contacts']; 
       }
     }
 
