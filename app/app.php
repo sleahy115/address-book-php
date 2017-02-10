@@ -23,7 +23,7 @@
 
     $app->post("/book", function() use ($app)
     {
-      $new_contact = new Contact($_POST['name'], $_POST['address'], $_POST['phone-number']);
+      $new_contact = new Contact($_POST['name'], $_POST['address'], $_POST['phone-number'], $_POST["email"]);
       $new_contact->save();
       return $app['twig']->render("form_output.html.twig", array("contact_list"=>$_SESSION['list_of_contacts']) );
     });

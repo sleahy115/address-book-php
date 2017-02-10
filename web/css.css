@@ -1,10 +1,25 @@
+.jumbotron{
+    background-color: teal;
+    color: white;
+    font-size: 45px;
+    margin-top: 10px;
+}
 h1{
-    color: teal;
+    text-decoration: underline;
+}
+#heading{
+    background-color: teal;
+    color: white;
 }
 button {
     background-color: teal;
     color: white;
 }
-a {
+a{
     color: white;
+}
+li{
+    font-style: italic;
+    font-size: 20px;
+    color: #293d3d;
 }

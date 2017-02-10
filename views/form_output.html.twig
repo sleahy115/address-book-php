@@ -6,13 +6,18 @@
       </head>
       <body>
     <div class="container">
-      <h1 class="jumbotron">Contacts</h1>
+      <div class="jumbotron">Contacts</div>
         {% for contact in contact_list %}
-        <h1>{{contact.name}}</h1>
-        <ul>
-            <l1>{{contact.address}}</l1>
-            <l1>{{contact.phone_number}}</l1>
-        </ul>
+        <div class="panel-heading" id="heading">
+            <h1>{{contact.name}}</h1>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>Address-{{contact.address}}</li>
+                <li>Phone number-{{contact.phone_number}}</li>
+                <li>Email-{{contact.email}}</li>
+            </ul>
+        </div>
         {% endfor %}
       <button type="button"><a href="/">Add another contact</a></button>
       <button type="button"><a href="/clear">Clear contacts</a></button>
