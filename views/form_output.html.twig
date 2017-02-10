@@ -4,12 +4,14 @@
       </head>
       <body>
       <h1>Contacts</h1>
-      {% for contacts in contact %}
-        <h1>{{contacts.name}}</h1>
+      {% for contact in contact_list %}
+        <h1>{{contact.name}}</h1>
         <ul>
-            <l1>{{contacts.address}}
-            <l1>{{contacts.phone_number}}
+            <l1>{{contact.address}}</l1>
+            <l1>{{contact.phone_number}}</l1>
         </ul>
-      {% endfor %}
+        {% endfor %}
+      <button type="button"><a href="/">Add another contact</a></button>
+      <button type="button"><a href="/clear">Clear contacts</a></button>
       </body>
   </html>

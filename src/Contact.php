@@ -39,11 +39,15 @@
       }
       function save()
       {
-          array_push($_SESSION['list_of_contacts']);
+          array_push($_SESSION['list_of_contacts'], $this);
       }
-      function getAll()
+      static function getAll()
       {
-        return $_SESSION['list_of_contacts']; 
+        return $_SESSION['list_of_contacts'];
+      }
+      static function clearAll()
+      {
+          return $_SESSION['list_of_contacts'] = array();
       }
     }
 
