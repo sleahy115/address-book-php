@@ -51,14 +51,12 @@
       {
           array_push($_SESSION['list_of_contacts'], $this);
       }
-      function search($name_entered){
-          if ($name_entered == $this->name)
-          {
-            return true;
-        }else {
-            return false;
-        }
+      function clearContact($delete_contact)
+      {
+          $delete_contact = array();
+          return $delete_contact;
       }
+
       static function getAll()
       {
         return $_SESSION['list_of_contacts'];

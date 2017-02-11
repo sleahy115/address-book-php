@@ -20,23 +20,23 @@
     {
       $new_contact = new Contact($_POST['name'], $_POST['address'], $_POST['phone-number'], $_POST['email']);
       $new_contact->save();
-      return $app['twig']->render("form_output.html.twig", array("contact_list"=>$_SESSION['list_of_contacts']) );
-    });
-    $app->get("/search-form", function() use ($app)
-    {
-        return $app['twig']->render("search-form.html.twig", array("contacts" => Contact::getAll()));
-    });
-    $app->post("/search", function() use ($app)
-    {
-        var_dump(Contact::getAll());
-        $name_entered =$_POST["name"];
-        Contact::getAll()->search($name_entered);
-        var_dump(Contact::getAll()->search($name_entered));
-        return $app['twig']->render("search.html.twig");
+      $new_contact->clearContact($new_contact);
+      return $app['twig']->render("form_output.html.twig", array("contact_list"=>$_SESSION['list_of_contacts']));
+
+    //   $delete_contact = array_slice($_SESSION['list_of_contacts'], -1);
+    //   $delete_contact = array();
+    //   var_dump($delete_contact);
+
     });
     $app->get("/clear", function() use ($app)
     {
         return $app['twig']->render("clear.html.twig", array("clear" => Contact::clearAll()));
     });
+
+    // $app->get("/clear-contact", function() use ($app)
+    // {
+    //
+    //     return $app['twig']->render("clear-contact.html.twig", array("delete"=>$delete_contact));
+    // });
     return $app;
 ?>
