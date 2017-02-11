@@ -5,24 +5,24 @@
           <link href="css.css" rel="stylesheet" type="text/css">
       </head>
       <body>
-    <div class="container">
-      <div class="jumbotron">Contacts</div>
-        {% for contact in contact_list %}
-        <div class="panel panel-default">
-            <div class="panel-heading" id="heading">
-                <h1>{{contact.name}}</h1>
+        <div class="container">
+          <div class="jumbotron">Contacts</div>
+            {% for contact in contact_list %}
+            <div class="panel panel-default">
+                <div class="panel-heading" id="heading">
+                    <h1>{{contact.name}}</h1>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Address:{{contact.address}}</li>
+                        <li>Phone number:{{contact.phone_number}}</li>
+                        <li>Email:{{contact.email}}</li>
+                    </ul>
+                </div>
             </div>
-            <div class="panel-body">
-                <ul>
-                    <li>Address:{{contact.address}}</li>
-                    <li>Phone number:{{contact.phone_number}}</li>
-                    <li>Email:{{contact.email}}</li>
-                </ul>
-            </div>
+            {% endfor %}
+          <button type="button"><a href="/">Add another contact</a></button>
+          <button type="button"><a href="/clear">Clear all contacts</a></button>
         </div>
-        {% endfor %}
-      <button type="button"><a href="/">Add another contact</a></button>
-      <button type="button"><a href="/clear">Clear all contacts</a></button>
-    </div>
       </body>
   </html>
