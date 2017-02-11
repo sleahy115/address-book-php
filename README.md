@@ -28,7 +28,7 @@ _Composer, Silex, Twig and a Server are required_
 
 ## Known Bugs
 
-_Delete individual contact is not operational at this time, the delete button will remove all contacts in the list. _
+_Delete individual contact is not operational at this time, the delete button will remove all contacts in the list._
 
 ## Support and contact details
 
