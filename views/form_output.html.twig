@@ -10,13 +10,13 @@
             {% for contact in contact_list %}
             <div class="panel panel-default">
                 <div class="panel-heading" id="heading">
-                    <h1>{{contact.name}}</h1>
+                    <h1>{{contact.getName()}}</h1>
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Address:{{contact.address}}</li>
-                        <li>Phone number:{{contact.phone_number}}</li>
-                        <li>Email:{{contact.email}}</li>
+                        <li>Address:{{contact.getAddress()}}</li>
+                        <li>Phone:{{contact.getPhoneNumber()}}</li>
+                        <li>Email:{{contact.getEmail()}}</li>
                     </ul>
                 </div>
             </div>

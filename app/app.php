@@ -19,7 +19,8 @@
     $app->post("/book", function() use ($app){
       $new_contact = new Contact($_POST['name'], $_POST['address'], $_POST['phone-number'], $_POST['email']);
       $new_contact->save();
-      $new_contact->clearContact($new_contact);
+      var_dump($_SESSION['list_of_contacts']);
+    //   $new_contact->clearContact($new_contact);
       return $app['twig']->render("form_output.html.twig", array("contact_list"=>$_SESSION['list_of_contacts']));
     //   $delete_contact = array_slice($_SESSION['list_of_contacts'], -1);
     //   $delete_contact = array();

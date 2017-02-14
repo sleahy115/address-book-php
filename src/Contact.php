@@ -3,7 +3,7 @@
       class Contact {
         private $name;
         private $address;
-        private $Phone_number;
+        private $phone_number;
         private $email;
 
 
