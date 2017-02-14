@@ -19,10 +19,13 @@ _A simple address book that accepts contacts and displays them. The contacts can
 
 ## Setup/Installation Requirements
 
-* _The application can be accessed at sleahy115.github.io/Address-book-php or by_
-* _Cloning repository from github._
-* _installing composer with Silex and Twig_
-* _loading localhost:8000 server_
+## Setup/Installation Requirements
+* Install PHP- https://www.learnhowtoprogram.com/php/getting-started-with-php/installing-php-4b2cf877-24e6-469a-89cb-68032e96da3a_
+* Install Composer (instructions in above link)
+* Clone project
+* From project root, run composer install
+* From web folder in project, Start PHP > php -S localhost:8000
+* In web browser open localhost:8000
 
 _Composer, Silex, Twig and a Server are required_
 
