@@ -23,7 +23,7 @@ _A simple address book that accepts contacts and displays them. The contacts can
 * Install PHP- https://www.learnhowtoprogram.com/php/getting-started-with-php/installing-php-4b2cf877-24e6-469a-89cb-68032e96da3a_
 * Install Composer (instructions in above link)
 * Clone project
-* From project root, run composer install
+* From project root, run Composer install
 * From web folder in project, Start PHP > php -S localhost:8000
 * In web browser open localhost:8000
 
